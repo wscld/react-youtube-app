@@ -1,0 +1,25 @@
+@import '../../values';
+
+.item-container {
+    margin-bottom: 5px;
+    .item-card {
+        display: flex;
+        align-items: center;
+    }
+    .item-thumbnail {
+        width: 150px;
+        height: 150px;
+        background-color: $primary-color-darker;
+    }
+    .item-content {
+        padding: 15px;
+        margin-right: 10px;
+        .item-title {
+            font-weight: bold;
+        }
+        .item-subtitle {
+            font-weight: normal;
+            word-break: break-all;
+        }
+    }
+}

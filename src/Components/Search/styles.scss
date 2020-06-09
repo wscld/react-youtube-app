@@ -1,0 +1,28 @@
+@import '../../values';
+
+.search-anim-top {
+    animation: top-keyframes 1s normal forwards;
+}
+.search-container {
+    position: relative;
+    margin-top: 50%;
+
+    .search-card {
+        display: flex;
+        padding: 10px;
+        margin-bottom: 15px;
+        .search-button {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+@keyframes top-keyframes {
+    from {
+        margin-top: 50%;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
