@@ -19,6 +19,10 @@
     "react-text-truncate": "^0.16.0",
     "react-youtube": "^7.11.2"
   },
+  "engines": {
+    "npm": "6.13.4",
+    "node": "12.16.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
