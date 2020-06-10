@@ -1,8 +1,8 @@
 import React from 'react';
 import Youtube from 'react-youtube';
-import { ThumbDown, ThumbUp, Visibility } from '@material-ui/icons';
-import { numberFormat } from '../../utils';
 import './styles.scss';
+import { numberFormat } from '../../utils';
+import { ThumbDown, ThumbUp, Visibility } from '@material-ui/icons';
 import { Card } from '@material-ui/core';
 
 const Video = (props) => {

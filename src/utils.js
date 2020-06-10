@@ -6,4 +6,10 @@ export const numberFormat = (n) => {
     if (n >= 1e12) return +(n / 1e12).toFixed(1) + "T";
 };
 
-export default { numberFormat };
+export const validateQuery = (q) => {
+    if (q.length == 0) {
+        return "Pesquisa invalida, tente novamente."
+    }
+}
+
+export default { numberFormat, validateQuery };

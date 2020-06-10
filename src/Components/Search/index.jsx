@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.scss';
+import Top from '../Top';
 import { Input, Paper, Button } from '@material-ui/core';
 import { ArrowBack } from '@material-ui/icons';
 import { useState } from 'react';
-import Top from '../Top';
 
 const Search = (props) => {
     const [value, setValue] = useState("");

@@ -6,7 +6,7 @@ export const findVideos = async (q, pageToken) => {
     try {
         let response = await axios({
             method: 'get',
-            url: 'https://5ee0106a9ed06d001696dac4.mockapi.io/search',
+            url: 'https://www.googleapis.com/youtube/v3/search',
             params: {
                 part: "id,snippet",
                 type:"video",
@@ -25,9 +25,9 @@ export const getVideo = async (id) => {
     try {
         let response = await axios({
             method: 'get',
-            url: 'https://5ee0106a9ed06d001696dac4.mockapi.io/video',
+            url: 'https://www.googleapis.com/youtube/v3/videos',
             params: {
-                part:'part=snippet,statistics',
+                part:'snippet,statistics',
                 key: key,
                 id
             }
