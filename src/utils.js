@@ -7,7 +7,7 @@ export const numberFormat = (n) => {
 };
 
 export const validateQuery = (q) => {
-    if (q.length == 0) {
+    if (q.length === 0) {
         return "Pesquisa invalida, tente novamente."
     }
 }

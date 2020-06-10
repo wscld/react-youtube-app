@@ -46,10 +46,10 @@ const Home = () => {
 
 
         var index = 0;
-        if (action == "next") {
+        if (action === "next") {
             index = pageIndex + 1;
             setPageIndex(pageIndex + 1);
-        } else if (action == "prev") {
+        } else if (action === "prev") {
             index = pageIndex - 1;
             setPageIndex(pageIndex - 1);
         } else {
@@ -61,7 +61,7 @@ const Home = () => {
             .then(response => {
                 setLoading(false);
                 setVideos(response.items);
-                if (action != "prev") {
+                if (action !== "prev") {
                     setPageTokens([...pageTokens, response.nextPageToken])
                 }
             }).catch(err => {
@@ -89,7 +89,7 @@ const Home = () => {
 
     return (
         <div className="container">
-            <Alert open={error != ""} error={error} onClose={() => handleCloseAlert()}></Alert>
+            <Alert open={error !== ""} error={error} onClose={() => handleCloseAlert()}></Alert>
             <Search showBack={videoObj.id ? true : false} onBack={() => handleBack()} animTop={animSearch} onSearch={handleSubmit}></Search>
             {loading ? <ReactLoading className="loading" type="cylon" color="black" height={100} width={100} /> : null}
             {videoObj.id ? <Video id={videoObj.id} snippet={videoObj.snippet} statistics={videoObj.statistics} /> : null}

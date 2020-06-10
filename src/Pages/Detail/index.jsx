@@ -14,10 +14,6 @@ const Detail = () => {
         loadVideo(id)
     }
 
-    const didFinish = () => {
-
-    }
-
     const loadVideo = (id) => {
         getVideo(id)
             .then(response => {
@@ -34,12 +30,11 @@ const Detail = () => {
 
     useEffect(() => {
         didInit();
-        return didFinish();
     }, []);
 
     return (
         <div className="container">
-            <Alert open={error != ""} error={error} onClose={() => handleCloseAlert()}></Alert>
+            <Alert open={error !== ""} error={error} onClose={() => handleCloseAlert()}></Alert>
             <Top />
             {videoObj.id ? <Video id={videoObj.id} snippet={videoObj.snippet} statistics={videoObj.statistics} /> : null}
         </div>
