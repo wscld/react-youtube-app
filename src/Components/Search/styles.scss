@@ -7,16 +7,31 @@
     position: relative;
     margin-top: 50%;
 
-    .search-card {
+    .back{
+        animation: rotate-keyframes .5s normal forwards;
+    }
+    .card {
         display: flex;
         padding: 10px;
         margin-bottom: 15px;
-        .search-button {
+        .button {
             padding-left: 15px;
             padding-right: 15px;
         }
     }
 }
+
+@keyframes rotate-keyframes {
+    from {
+        transform:rotate(0deg);
+        opacity: 0;
+    }
+    to {
+        transform:rotate(360deg);
+        opacity: 1;
+    }
+}
+
 
 @keyframes top-keyframes {
     from {

@@ -1,0 +1,16 @@
+@import '../../values';
+
+.top{
+    font-size: 35px;
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: .2s;
+    span{
+        font-weight: lighter;
+    }
+}
+.top:hover{
+    color:$primary-color-darker;
+}

@@ -1,0 +1,53 @@
+@import '../../values';
+
+.video-container {
+    margin-bottom: 15px;
+    animation: fade-keyframes 1s normal forwards;
+    .title {
+        font-weight: bold;
+        padding: 15px;
+        font-size: $title-size;
+    }
+    .subtitle {
+        padding: 15px;
+        padding-top: 0px;
+        font-size: $subtitle-size;
+    }
+    .counter {
+        display: flex;
+        justify-content: space-between;
+        .likedislike {
+            display: flex;
+            .like {
+                padding: 15px;
+                display: flex;
+                span {
+                    margin-left: 10px;
+                }
+            }
+            .dislike {
+                padding: 15px;
+                display: flex;
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+        .view {
+            padding: 15px;
+            display: flex;
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@keyframes fade-keyframes {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

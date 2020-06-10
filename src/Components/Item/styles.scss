@@ -1,25 +1,41 @@
-@import '../../values';
+@import "../../values";
 
 .item-container {
     margin-bottom: 5px;
-    .item-card {
+    animation: fade-keyframes 0.3s normal forwards;
+    .card {
         display: flex;
         align-items: center;
     }
-    .item-thumbnail {
+    .thumbnail {
         width: 150px;
         height: 150px;
         background-color: $primary-color-darker;
     }
-    .item-content {
+    .content {
         padding: 15px;
         margin-right: 10px;
-        .item-title {
+        .title {
             font-weight: bold;
+            font-size: $title-size;
         }
-        .item-subtitle {
+        .subtitle {
             font-weight: normal;
             word-break: break-all;
+            font-size: $subtitle-size;
         }
+    }
+}
+
+.item-container:hover {
+    cursor: pointer;
+}
+
+@keyframes fade-keyframes {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
