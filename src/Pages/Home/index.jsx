@@ -52,6 +52,7 @@ const Home = () => {
         } else if (action === "prev") {
             index = pageIndex - 1;
             setPageIndex(pageIndex - 1);
+            setPageTokens([...pageTokens.slice(0, pageTokens.length - 1)]);
         } else {
             setPageTokens([]);
             setPageIndex(0);
